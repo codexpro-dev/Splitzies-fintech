@@ -208,6 +208,9 @@ body {
     width: 100%;
   }
 
+  .col{
+    margin-bottom: 7rem;
+  }
 
   .logog {
     display: block;
