@@ -7,7 +7,11 @@ import { MdAdd } from "react-icons/md";
 import { FaArrowUp } from "react-icons/fa";
 import { HiTicket } from "react-icons/hi2";
 import { BiSolidChart } from "react-icons/bi";
+import { RiHome5Fill } from "react-icons/ri";
+import { RiPagesFill } from "react-icons/ri";
+import { RiNotificationBadgeFill } from "react-icons/ri";
 import { BsFillMoonStarsFill } from "react-icons/bs";
+import logo from "../assets/video-editing.png";
 
 import "./dashboard.css";
 import { useState, useEffect } from "react";
@@ -15,6 +19,7 @@ import { useState, useEffect } from "react";
 const Dashboard = () => {
   const [view, setView] = useState(false);
   const [time, setTime] = useState(new Date());
+  const [selected, setSelected] = useState("dashboard");
 
   useEffect(() => {
     const interval = setInterval(() => setTime(new Date()), 60000); // update every minute
@@ -33,7 +38,7 @@ const Dashboard = () => {
   };
 
   const icon = isEvening ? (
-    <BsFillMoonStarsFill className="text-[1.3rem] p-2 text-white w-[43px] h-[43px] border-[1.8px] border-[#97949476] rounded-full font-extrabold " />
+    <BsFillMoonStarsFill className="text-[1.3rem] p-2 text-blue-400 w-[43px] h-[43px] border-[1.8px] border-[#97949476] rounded-full font-extrabold " />
   ) : (
     <PiSunDimFill className="text-[1.3rem] p-2 text-orange-400 w-[43px] h-[43px] border-[1.8px] border-[#97949476] rounded-full font-extrabold " />
   );
@@ -51,9 +56,12 @@ const Dashboard = () => {
     <div className="ally">
       <div className="w-full sticky">
         <div className="dashNav">
+          <div className="logog">
+            <img src={logo} />
+          </div>
           <div className="pro flex">
             <IoMdNotificationsOutline className="text-[1.6rem] font-bold cursor-pointer hover:text-[#d827f4]" />
-            <div>
+            <div className="subN">
               <p className="font-semibold">GD</p>
             </div>
           </div>
@@ -77,8 +85,8 @@ const Dashboard = () => {
         </div>
         <div className="dashboard-bal mt-9">
           <div className="col">
-            <div className="flex w-full">
-              <div className="row w-full mr-2">
+            <div className="row-row flex w-full">
+              <div className="row rowMd w-full mr-2">
                 <div className="flex align-middle justify-between">
                   <div className="flex text-center align-middle justify-evenl">
                     <IoWallet className="text-[20px] mr-3 mt-[1px]" />
@@ -127,9 +135,9 @@ const Dashboard = () => {
                 </div>
               </div>
             </div>
-            <div className="row">
-              <div className="flex align-middle justify-between">
-                <div>
+            <div className="row history">
+              <div className="flex fox align-middle justify-between">
+                <div className="sly">
                   <div className="trend">
                     <BiSolidChart className="text-[22px]" />
                     <div className="ml-3">
@@ -138,15 +146,65 @@ const Dashboard = () => {
                     </div>
                   </div>
                 </div>
-                <div>
+                <div className="btn-btn">
                   <button className="viewAll rounded-3xl">View All</button>
                 </div>
               </div>
               <div className="hero-btn">
-                <p className="text-center">No transaction yet</p>
+                <p className="h-txt text-center">No transaction yet</p>
               </div>
             </div>
           </div>
+        </div>
+      </div>
+      <div className="mediaN">
+        <div className="links-txt align-middle justify-center w-full">
+          <p
+            onClick={() => setSelected("dashboard")}
+            className={`flex-col items-center cursor-pointer rounded`}
+          >
+            <RiHome5Fill
+              className={`hover:text-purple-900 text-[25px] ${
+                selected === "dashboard" ? "text-[#d49adc]" : "text-[#bd02d6d4]"
+              }`}
+            />
+            Home
+          </p>
+
+          <p
+            onClick={() => setSelected("subscriptions")}
+            className={`flex-col items-center cursor-pointer rounded`}
+          >
+            <RiPagesFill
+              className={`hover:text-purple-900 text-[25px] ${
+                selected === "subscriptions"
+                  ? "text-[#d49adc]"
+                  : "text-[#bd02d6d4]"
+              }`}
+            />
+            Subscriptions
+          </p>
+
+          <p
+            onClick={() => setSelected("transactions")}
+            className={`flex-col items-center cursor-pointer rounded`}
+          >
+            <RiNotificationBadgeFill
+              className={`hover:text-purple-900 text-[25px] ${
+                selected === "transactions"
+                  ? "text-[#d49adc]"
+                  : `text-[#bd02d6d4]`
+              }`}
+            />
+            History
+          </p>
+          <p
+            onClick={() => setSelected("account")}
+            className={`flex-col items-center justify-center cursor-pointer p-2 rounded`}
+          >
+            <div className="subNN p-0">GD</div>
+            Me
+          </p>
         </div>
       </div>
     </div>

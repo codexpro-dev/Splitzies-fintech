@@ -1,195 +1,341 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
-body{
-    width: 100%;
-    overflow: auto;
+body {
+  width: 100%;
+  overflow: auto;
 }
 
-.ally{
-    width: 100%;
-    background-color: rgb(0, 0, 0);
+.ally {
+  width: 100%;
+  background-color: rgb(0, 0, 0);
 }
 
-.dashboard{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: 100vh;
-    color: #ffffff;
-    align-self: start;
-    padding: 6.5rem 3rem;
-    font-family: 'Poppins', sans-serif;
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  color: #ffffff;
+  align-self: start;
+  padding: 6.5rem 3rem;
+  font-family: "Poppins", sans-serif;
 }
 
-
-.dashNav{
-    background: #ffffff11;
-    position: fixed;
-    width: 77.5%;
-    top: 0;
-    padding: 0.8rem 1rem;
-    color: rgb(255, 255, 255);
-    backdrop-filter: blur(15px);
-    -webkit-backdrop-filter: blur(40px);
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    border-bottom: 1px solid rgba(155, 153, 153, 0.317);
-}
-
-.pro{
-    align-items: center;
-    padding-right: 1.5rem;
-}
-
-.pro div{
-    background-color: rgb(189, 2, 214);
-    border-radius: 100%;
-    padding: 0.3rem 0.4rem;
-    border: 2.5px rgba(255, 255, 255, 0.6) solid;
-    margin-left: 1rem;
-    cursor: pointer;
-    transition: .3s ease;
-}
-
-.pro div:hover{
-    opacity: 0.8;
-}
-
-.hero{
-    border-bottom: 1px solid #97949492 ;
-}
-
-
-.hero .divv{
-    width: 100%;
-    display: flex;
-    align-items: center;
-    margin-bottom: 1rem;
-}
-
-.hero-text{
-    margin-left: 1rem;
-}
-
-.hero p{
-    color: #ffffffc8;
-    margin-bottom: 1.8rem;
-    font-size: 15px;
-}
-
-.hero-text p{
-    color: #ffffffc8;
-    margin: 0;
-}
-
-.hero-text h1{
-    font-size: 1.8rem;
-}
-
-.row{
-background: linear-gradient(
-  135deg,
-  #4b0a63,
-  #611177,
-  #9228ac,
-  #b250d6
-);
-    padding: 22px 16px;
-    border-radius: 15px;
-    height: 11rem;
-    margin-bottom: 1rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.roww{
-     background: linear-gradient(
-  135deg,
-  #d4d4d4,
-  #f9f9f9,
-  #c0c0c0,
-  #e0e0e0,
-  #aaaaaa
-);
-    color: black;
-}
-
-.row h1{
-    font-size: 2.5rem;
-    font-weight: bold;
-}
-
-.hero-btn button{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.ticket{
-    display: flex;
-    width: 100%;
-    align-items: center;
-}
-
-
-.trend{
+.dashNav {
+  background: #ffffff11;
+  position: fixed;
+  width: 77.5%;
+  top: 0;
+  padding: 0.8rem 1rem;
+  color: rgb(255, 255, 255);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(40px);
   display: flex;
   align-items: center;
-
+  justify-content: flex-end;
+  border-bottom: 1px solid rgba(155, 153, 153, 0.317);
 }
 
-.trend h3{
+.pro {
+  align-items: center;
+  padding-right: 1.5rem;
+}
+
+.pro div {
+  background-color: rgb(189, 2, 214);
+  border-radius: 100%;
+  padding: 0.3rem 0.4rem;
+  border: 2.5px rgba(255, 255, 255, 0.6) solid;
+  margin-left: 1rem;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.pro div:hover {
+  opacity: 0.8;
+}
+
+.hero {
+  border-bottom: 1px solid #97949492;
+}
+
+.hero .divv {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.hero-text {
+  margin-left: 1rem;
+}
+
+.hero p {
+  color: #ffffffc8;
+  margin-bottom: 1.8rem;
+  font-size: 15px;
+}
+
+.hero-text p {
+  color: #ffffffc8;
+  margin: 0;
+}
+
+.hero-text h1 {
+  font-size: 1.8rem;
+}
+
+.row {
+  background: linear-gradient(135deg, #4b0a63, #611177, #9228ac, #b250d6);
+  padding: 22px 16px;
+  border-radius: 15px;
+  height: 11rem;
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.roww {
+  background: linear-gradient(
+    135deg,
+    #d4d4d4,
+    #f9f9f9,
+    #c0c0c0,
+    #e0e0e0,
+    #aaaaaa
+  );
+  color: black;
+}
+
+.row h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.hero-btn button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ticket {
+  display: flex;
+  width: 100%;
+  align-items: center;
+}
+
+.trend {
+  display: flex;
+  align-items: center;
+}
+
+.trend h3 {
   font-size: 20px;
   font-family: serif;
 }
 
-.trend p{
+.trend p {
   font-size: 13px;
   color: rgba(255, 255, 255, 0.831);
 }
 
-.viewAll{
+.viewAll {
   /* padding: 0 !important; */
   border: 1px solid rgba(255, 255, 255, 0.687);
   display: flex;
   text-align: center;
   padding: 4px 9px;
   font-size: 13px;
-  transition: .3s ease;
+  transition: 0.3s ease;
 }
 
-.viewAll:hover{
-    background: #ffffff27;
+.viewAll:hover {
+  background: #ffffff27;
+}
+
+.logog {
+  display: none;
+}
+
+.mediaN {
+  display: none;
 }
 
 @media screen and (max-width: 1130px) {
-    .dashNav{
-        width: 74.3%;
-    }
+  .dashNav {
+    width: 74.3%;
+  }
 }
 
 @media screen and (max-width: 1000px) {
-    .dashNav{
-        width: 70.7%;
-    }
+  .dashNav {
+    width: 70.7%;
+  }
 
-    .row{
-        height: 14rem;
-    }
+  .row {
+    height: 14rem;
+  }
 
-    .hero-btn{
-        flex-direction: column;
-        margin-bottom: -1rem;
-    }
+  .hero-btn {
+    flex-direction: column;
+    margin-bottom: -1rem;
+  }
 
-    .hero-btn button{
-        margin-bottom: 9px;
-    }
+  .hero-btn button {
+    margin-bottom: 9px;
+  }
 
-    .dashboard{
-        padding-left: 1rem;
-        padding-right: 1rem;
-    }
+  .dashboard {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .history{
+    height: 11rem;
+    padding-bottom: 2.6rem;
+  }
+}
+
+@media screen and (max-width: 890px) {
+  .dashNav {
+    width: 65%;
+  }
+}
+
+@media screen and (max-width: 810px) {
+  .dashNav {
+    width: 100%;
+  }
+
+
+  .logog {
+    display: block;
+    width: 100%;
+    padding: 0 !important;
+  }
+
+  .subN {
+    display: none;
+  }
+
+  .logog img {
+    padding: 0;
+    margin: 0;
+    width: 3rem;
+  }
+
+  .mediaN {
+    display: flex;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    background: #000;
+    border-top: 1px solid #f1f0f068;
+  }
+
+  .mediaN .links-txt {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    padding-top: 5px;
+  }
+
+  .mediaN .links-txt p {
+    font-size: 0.8rem;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .mediaN .links-txt p:hover {
+    background-color: #ffffff0f;
+  }
+
+  .pro div {
+    background-color: rgb(189, 2, 214);
+    padding: 0 !important;
+  }
+
+  .subNN {
+    background-color: #bd02d6;
+    border-radius: 100%;
+    padding: 6px 7px !important;
+    font-size: 8px;
+    /* padding-top: 2px !important; */
+    /* padding-bottom: 0 !important; */
+    text-align: center !important;
+  }
+
+  .history {
+    height: 10rem;
+    padding-bottom: 1rem;
+  }
+
+  .history .h-txt {
+    padding-bottom: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .dashboard {
+    margin-bottom: 10.5rem;
+  }
+  .row-row {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .row {
+    height: 10rem;
+    margin: 0.7rem 0;
+  }
+
+  .row .hero-btn {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .col {
+    margin-bottom: 7rem;
+  }
+
+  .h-txt {
+    text-align: center;
+    width: 100%;
+  }
+
+  .btn-btn button {
+    font-size: 10px;
+  }
+
+  /* .fox{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    } */
+
+  .hero-text h1 {
+    font-size: 1.4rem;
+  }
+
+  .hero p {
+    font-size: 0.8rem;
+  }
+
+  .mediaN .links-txt {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    padding-top: 5px;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .links-txt {
+    padding-left: 0.5rem !important;
+    padding-right: 0.5rem !important;
+  }
 }

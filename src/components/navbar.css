@@ -109,3 +109,10 @@ width: 18rem;
   margin-bottom: 0;
   margin-top: 1.3rem;
 }
+
+
+@media screen and (max-width: 810px) {
+    .navB{
+      display: none;
+    }
+}
