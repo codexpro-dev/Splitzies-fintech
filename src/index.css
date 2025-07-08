@@ -9,15 +9,8 @@
 }
 
 body{
-  background: #b24040;
+  background: #000000;
   width: 100%;
-  display: flex;
-  overflow-y: scroll;
+  height: 100%;
 }
 
-.container{
-   align-items: baseline;
-  justify-content: start;
-  width: 100%;
-  display: flex;
-}
