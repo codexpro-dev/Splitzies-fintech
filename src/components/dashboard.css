@@ -7,25 +7,32 @@ body {
 
 .ally {
   width: 100%;
-  background-color: rgb(0, 0, 0);
+  background-color: rgb(255, 255, 255);
+  color: black;
+  height: 100%;
 }
 
 .dashboard {
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: 100vh;
-  color: #ffffff;
+  height: 100%;
+  color: #000000;
   align-self: start;
-  padding: 6.5rem 3rem;
+  padding: 6.5rem 1.5rem;
   font-family: "Poppins", sans-serif;
+  padding-bottom: 1rem;
 }
+
+
 
 .dashNav {
   background: #ffffff11;
   position: fixed;
-  width: 77.5%;
+  width: 100%;
   top: 0;
+  right: 0;
+  /* left: 0; */
   padding: 0.8rem 1rem;
   color: rgb(255, 255, 255);
   backdrop-filter: blur(15px);
@@ -34,6 +41,7 @@ body {
   align-items: center;
   justify-content: flex-end;
   border-bottom: 1px solid rgba(155, 153, 153, 0.317);
+  z-index: 1;
 }
 
 .pro {
@@ -42,7 +50,7 @@ body {
 }
 
 .pro div {
-  background-color: rgb(189, 2, 214);
+  background-color: rgb(71, 122, 248);
   border-radius: 100%;
   padding: 0.3rem 0.4rem;
   border: 2.5px rgba(255, 255, 255, 0.6) solid;
@@ -56,7 +64,7 @@ body {
 }
 
 .hero {
-  border-bottom: 1px solid #97949492;
+  border-bottom: 1px solid #e0dddd8f;
 }
 
 .hero .divv {
@@ -71,22 +79,23 @@ body {
 }
 
 .hero p {
-  color: #ffffffc8;
+  color: #00000085;
   margin-bottom: 1.8rem;
   font-size: 15px;
 }
 
 .hero-text p {
-  color: #ffffffc8;
+  color: #00000085;
   margin: 0;
 }
 
 .hero-text h1 {
   font-size: 1.8rem;
+  font-weight: bold;
 }
 
 .row {
-  background: linear-gradient(135deg, #4b0a63, #611177, #9228ac, #b250d6);
+  background: linear-gradient(135deg, #3b65e5, #374dce, #4f4cf1, #506fd6);
   padding: 22px 16px;
   border-radius: 15px;
   height: 11rem;
@@ -94,18 +103,13 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  color: white;
 }
 
 .roww {
-  background: linear-gradient(
-    135deg,
-    #d4d4d4,
-    #f9f9f9,
-    #c0c0c0,
-    #e0e0e0,
-    #aaaaaa
-  );
+  background: #ffffff;
   color: black;
+  border: 1px solid rgba(184, 182, 182, 0.253);
 }
 
 .row h1 {
@@ -137,12 +141,12 @@ body {
 
 .trend p {
   font-size: 13px;
-  color: rgba(255, 255, 255, 0.831);
+  color: #00000085;
 }
 
 .viewAll {
   /* padding: 0 !important; */
-  border: 1px solid rgba(255, 255, 255, 0.687);
+  border: 1px solid rgba(184, 182, 182, 0.267);
   display: flex;
   text-align: center;
   padding: 4px 9px;
@@ -151,7 +155,7 @@ body {
 }
 
 .viewAll:hover {
-  background: #ffffff27;
+  background: #697ff927;
 }
 
 .logog {
@@ -162,17 +166,7 @@ body {
   display: none;
 }
 
-@media screen and (max-width: 1130px) {
-  .dashNav {
-    width: 74.3%;
-  }
-}
-
 @media screen and (max-width: 1000px) {
-  .dashNav {
-    width: 70.7%;
-  }
-
   .row {
     height: 14rem;
   }
@@ -191,15 +185,9 @@ body {
     padding-right: 1rem;
   }
 
-  .history{
+  .history {
     height: 11rem;
     padding-bottom: 2.6rem;
-  }
-}
-
-@media screen and (max-width: 890px) {
-  .dashNav {
-    width: 65%;
   }
 }
 
@@ -208,7 +196,7 @@ body {
     width: 100%;
   }
 
-  .col{
+  .col {
     margin-bottom: 7rem;
   }
 
@@ -233,8 +221,8 @@ body {
     position: fixed;
     width: 100%;
     bottom: 0;
-    background: #000;
-    border-top: 1px solid #f1f0f068;
+    background: #ffffff;
+    border-top: 1px solid #cdc9c968;
   }
 
   .mediaN .links-txt {
@@ -261,13 +249,12 @@ body {
   }
 
   .subNN {
-    background-color: #bd02d6;
+    background-color: #7063fa;
     border-radius: 100%;
     padding: 6px 7px !important;
     font-size: 8px;
-    /* padding-top: 2px !important; */
-    /* padding-bottom: 0 !important; */
     text-align: center !important;
+    color: white;
   }
 
   .history {
@@ -281,9 +268,6 @@ body {
 }
 
 @media screen and (max-width: 640px) {
-  .dashboard {
-    margin-bottom: 10.5rem;
-  }
   .row-row {
     display: flex;
     flex-direction: column;
@@ -312,12 +296,6 @@ body {
   .btn-btn button {
     font-size: 10px;
   }
-
-  /* .fox{
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-    } */
 
   .hero-text h1 {
     font-size: 1.4rem;

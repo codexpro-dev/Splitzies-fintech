@@ -6,11 +6,21 @@ import { IoPerson } from "react-icons/io5";
 import { MdOutlineArrowForwardIos } from "react-icons/md";
 import { FiDownload } from "react-icons/fi";
 import { PiWarningCircleLight } from "react-icons/pi";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
 import "./navbar.css";
 
 const Navbar = () => {
-  const [selected, setSelected] = useState("dashboard");
+  const [selected, setSelected] = useState("");
+  const location = useLocation()
+
+
+
+  useEffect(() => {
+      const path = location.pathname.split("/")[1]; 
+      // e.g., "/subscriptions" → "subscriptions"
+      setSelected(path || "dashboard"); // fallback to "dashboard" if path is empty
+    }, [location.pathname]);
 
   return (
     <div className="navB">
@@ -21,85 +31,113 @@ const Navbar = () => {
               <img src={logo} />
             </div>
             <div className="links-txt">
-              <p
-                onClick={() => setSelected("dashboard")}
-                className={`flex items-center cursor-pointer p-2 rounded ${
-                  selected === "dashboard" ? "bg-[rgba(101,15,101,0.57)]" : ""
-                }`}
-              >
-                <RiHome5Fill className={`hover:text-purple-900 text-[25px] mr-3 ${
-                  selected === 'dashboard' ? 'text-[#cceec9fd]' : 'text-[#6e6ee3]'
-                  }`} />
-                Dashboard
-                {selected === "dashboard" && (
-                  <MdOutlineArrowForwardIos className="ml-auto text-[rgba(248, 226, 248, 0.769)]" />
-                )}
-              </p>
+              <Link to="/">
+                <p
+                  onClick={() => setSelected("dashboard")}
+                  className={`flex items-center text-[#00000085] cursor-pointer p-2 rounded ${
+                    selected === "dashboard"
+                      ? "bg-[rgba(99,128,255,0.185)] text-blue-500"
+                      : ""
+                  }`}
+                >
+                  <RiHome5Fill
+                    className={` text-[25px] mr-3 ${
+                      selected === "dashboard"
+                        ? "text-[#6e6ee3]"
+                        : "text-[#84a3eb]"
+                    }`}
+                  />
+                  Dashboard
+                  {selected === "dashboard" && (
+                    <MdOutlineArrowForwardIos className="ml-auto text-[rgba(248, 226, 248, 0.769)]" />
+                  )}
+                </p>
+              </Link>
 
+              <Link to="/subscription">
               <p
-                onClick={() => setSelected("subscriptions")}
+                onClick={() => setSelected("subscription")}
                 className={`flex items-center cursor-pointer p-2 rounded ${
-                  selected === "subscriptions"
-                    ? "bg-[rgba(128,0,128,0.458)]"
-                    : ""
+                  selected === "subscription"
+                    ? "bg-[rgba(99,128,255,0.185)] text-blue-500"
+                    : "text-[#00000085]"
                 }`}
               >
-                <RiPagesFill className={`hover:text-purple-900 text-[25px] mr-3 ${
-                  selected === 'subscriptions' ? 'text-[#cceec9fd]' : 'text-[#6e6ee3]'
-                  }`} />
+                <RiPagesFill
+                  className={` text-[25px] mr-3 ${
+                    selected === "subscription"
+                      ? "text-[#6e6ee3]"
+                      : "text-[#84a3eb]"
+                  }`}
+                />
                 Subscriptions
-                {selected === "subscriptions" && (
-                  <MdOutlineArrowForwardIos className="ml-auto text-[rgba(248, 226, 248, 0.769)]" />
+                {selected === "subscription" && (
+                  <MdOutlineArrowForwardIos className="ml-auto  text-blue-500" />
                 )}
               </p>
+              </Link>
 
+              <Link to="/transactions">
               <p
                 onClick={() => setSelected("transactions")}
                 className={`flex items-center cursor-pointer p-2 rounded ${
                   selected === "transactions"
-                    ? "bg-[rgba(128,0,128,0.458)]"
-                    : ""
+                    ? "bg-[rgba(99,128,255,0.185)] text-blue-500"
+                    : "text-[#00000085]"
                 }`}
               >
-                <RiNotificationBadgeFill className={`hover:text-purple-900 text-[25px] mr-3 ${
-                  selected === 'transactions' ? 'text-[#cceec9fd]' : 'text-[#6e6ee3]'
-                  }`} />
+                <RiNotificationBadgeFill
+                  className={` text-[25px] mr-3 ${
+                    selected === "transactions"
+                      ? "text-[#6e6ee3]"
+                      : "text-[#84a3eb]"
+                  }`}
+                />
                 Transactions
                 {selected === "transactions" && (
-                  <MdOutlineArrowForwardIos className="ml-auto text-[rgba(248, 226, 248, 0.769)]" />
+                  <MdOutlineArrowForwardIos className="ml-auto text-blue-500" />
                 )}
               </p>
+              </Link>
 
+              <Link to='/account'>
               <p
                 onClick={() => setSelected("account")}
                 className={`flex items-center cursor-pointer p-2 rounded ${
-                  selected === "account" ? "bg-[rgba(128,0,128,0.458)]" : ""
+                  selected === "account"
+                    ? "bg-[rgba(99,128,255,0.185)] text-blue-500"
+                    : "text-[#00000085]"
                 }`}
               >
-                <IoPerson className={`hover:text-purple-900 text-[25px] mr-3 ${
-                  selected === 'account' ? 'text-[#cceec9fd]' : 'text-[#6e6ee3]'
-                  }`} />
+                <IoPerson
+                  className={` text-[25px] mr-3 ${
+                    selected === "account" ? "text-[#6e6ee3]" : "text-[#84a3eb]"
+                  }`}
+                />
                 Account
                 {selected === "account" && (
-                  <MdOutlineArrowForwardIos className="ml-auto text-[rgba(248, 226, 248, 0.769)]" />
+                  <MdOutlineArrowForwardIos className="ml-auto text-blue-500" />
                 )}
               </p>
+              </Link>
             </div>
             <div className="div">
               <div className="app">
                 <div className="flex justify-between mb-1  align-middle">
                   <div className="install">
-                    <FiDownload className="text-lg" />
-                    <p className="pl-3 font-bold">Install App</p>
+                    <FiDownload className="text-lg text-blue-500" />
+                    <p className="pl-3 font-semibold text-[#000000]">
+                      Install App
+                    </p>
                   </div>
-                  <p className="bg-[#ffffffd8] h-5 pb-[-3px] mt-1 w-12 rounded-full text-purple-950 text-center text-[12px] font-bold ">
+                  <p className="bg-[#ffffffd8] h-5 pb-[-3px] mt-1 w-12 rounded-full text-blue-500 text-center text-[12px] font-bold ">
                     New
                   </p>
                 </div>
-                <p className="text-[#ffffffd5]">
+                <p className="text-[#00000085]">
                   Install Splitzies for faster access and offline features.
                 </p>
-                <button className="bg-white text-center pt-2 pb-2 mt-[12px]  text-purple-950 font-semibold flex w-full rounded-full">
+                <button className="bg-blue-600 text-center pt-2 pb-2 mt-[12px]  text-white font-semibold flex w-full rounded-full">
                   <p className="pr-3 text-[14px]">Install Now</p>
                   <FiDownload className="text-lg" />
                 </button>
@@ -108,17 +146,20 @@ const Navbar = () => {
             <div className="line"></div>
             <div className="div dev">
               <div className="app apk">
-               <div className="install one">
-                 <PiWarningCircleLight className="text-lg" />
-              <p className="pl-3 font-bold">
-                Need Help?</p>
-               </div>
-              <p className="text-[#ffffffd5]">Have questions about your subscription?</p>
-              <button className="bg-white text-center pt-2 pb-2 mt-[12px]  text-purple-950 font-semibold flex w-full rounded-full">
-                <p className="pr-3 text-[14px]">Contact Support</p>
-                <MdOutlineArrowForwardIos />
+                <div className="install one">
+                  <PiWarningCircleLight className="text-lg text-blue-500" />
+                  <p className="pl-3 font-semibold text-black">Need Help?</p>
+                </div>
+                <p className="text-[#00000085]">
+                  Have questions about your subscription?
+                </p>
+                <button className=" bg-[#6380ff2f] text-center pt-2 pb-2 mt-[12px]  text-white font-semibold flex w-full rounded-full">
+                  <p className="pr-3 text-[14px] text-blue-600">
+                    Contact Support
+                  </p>
+                  <MdOutlineArrowForwardIos className="text-blue-600" />
                 </button>
-            </div>
+              </div>
             </div>
           </div>
         </div>
