@@ -10,6 +10,10 @@
   font-family: "Inter", sans-serif;
 }
 
+.logoo{
+  margin-bottom: 1rem;
+}
+
 .login {
   display: flex;
   flex-direction: column;

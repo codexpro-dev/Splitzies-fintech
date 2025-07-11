@@ -3,7 +3,7 @@ import { RiHome5Fill } from "react-icons/ri";
 import { RiPagesFill } from "react-icons/ri";
 import { RiNotificationBadgeFill } from "react-icons/ri";
 import { useState, useEffect } from "react";
-import logo from "../assets/video-editing.png";
+import logo from "../assets/video-editing1.png";
 import "./transactions.css";
 import { Link, useLocation } from "react-router-dom";
 
@@ -48,7 +48,7 @@ const Transactions = () => {
 
       <div className="mediaN">
         <div className="links-txt align-middle justify-center w-full">
-          <Link to="/">
+          <Link to="/dashboard">
             <p
               onClick={() => setSelected("dashboard")}
               className={`flex-col items-center cursor-pointer rounded ${

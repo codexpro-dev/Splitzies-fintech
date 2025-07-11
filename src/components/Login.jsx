@@ -10,7 +10,7 @@ const Login = () => {
 
   return (
     <div className="login-cont">
-      <div className="logoo ">
+      <div className="logoo">
         <img className="w-[6rem] mb-3 mt-3" src={logo} alt="" />
       </div>
       <div className="login">
