@@ -1,4 +1,4 @@
-import logo from "../assets/video-editing.png";
+import logo from "../assets/video-editing1.png";
 import { RiHome5Fill } from "react-icons/ri";
 import { RiPagesFill } from "react-icons/ri";
 import { RiNotificationBadgeFill } from "react-icons/ri";
@@ -31,7 +31,7 @@ const Navbar = () => {
               <img src={logo} />
             </div>
             <div className="links-txt">
-              <Link to="/">
+              <Link to="/dashboard">
                 <p
                   onClick={() => setSelected("dashboard")}
                   className={`flex items-center text-[#00000085] cursor-pointer p-2 rounded ${

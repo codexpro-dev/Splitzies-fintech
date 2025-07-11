@@ -43,10 +43,12 @@ const Account = () => {
             <h1 className="text-[1.6rem] font-bold">Account Settings</h1>
             <p>Manage your account settings and preferences.</p>
           </div>
+          <Link to='/'>
           <button className="bg-red-500 text-white flex signout">
             <CiLogout className="font-bold  mr-2 text-[18px]" />
             Sign Out
           </button>
+          </Link>
         </div>
         <div className="acct-cont">
           <div className="acct-details">
@@ -87,10 +89,12 @@ const Account = () => {
                   <LuUser className="text-blue-600 font-bold text-[24px] mr-2" />
                   Profile Information
                 </h3>
+                
                 <button className="text-[13px] flex edit">
                   <FiEdit3 className="mr-3" />
                   Edit
                 </button>
+                
               </div>
               <p>Update your personal information</p>
               <div className="det-col flex justify-between">

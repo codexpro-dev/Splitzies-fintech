@@ -11,7 +11,7 @@ import { RiHome5Fill } from "react-icons/ri";
 import { RiPagesFill } from "react-icons/ri";
 import { RiNotificationBadgeFill } from "react-icons/ri";
 import { BsFillMoonStarsFill } from "react-icons/bs";
-import logo from "../assets/video-editing.png";
+import logo from "../assets/video-editing1.png";
 import { Link } from "react-router-dom";
 import "./dashboard.css";
 import { useState, useEffect } from "react";

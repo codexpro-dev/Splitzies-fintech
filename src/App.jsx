@@ -1,28 +1,35 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Dashboard from "./components/Dashboard"
-import Navbar from "./components/Navbar"
-import Subscription from "./components/Subscription"
-import Transactions from "./components/Transactions"
-import Account from './components/Account';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Dashboard from "./components/Dashboard";
+import Subscription from "./components/Subscription";
+import Transactions from "./components/Transactions";
+import Account from "./components/Account";
+import Login from "./components/Login";
+import MainLayouts from "./components/MainLayouts";
+import Forgot from "./components/Forgot";
+import Register from "./components/Register";
+
 
 const App = () => {
   return (
     <Router>
-      <div className="w-full bg-white h-full flex align-top justify-start p-0 m-0">
-      <div>
-        <Navbar />
-      </div>
-      <div className="w-full">
-         <Routes>
-            <Route path="/" element={<Dashboard />} />
-            <Route path="/subscription" element={<Subscription />} />
-            <Route path="/transactions" element={<Transactions />} />
-            <Route path="/account" element={<Account />} />
-          </Routes>
-      </div>
-    </div>
-    </Router>
-  )
-}
 
-export default App
+
+       <Routes>
+        {/* Login page (no layout) */}
+        <Route path="/" element={<Login />} />
+        <Route path="/forgot" element={<Forgot />} />
+        <Route path="/register" element={<Register />} />
+
+        {/* Routes with shared layout */}
+        <Route element={<MainLayouts />}>
+          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/subscription" element={<Subscription />} />
+          <Route path="/transactions" element={<Transactions />} />
+          <Route path="/account" element={<Account />} />
+        </Route>
+      </Routes>
+    </Router>
+  );
+};
+
+export default App;
